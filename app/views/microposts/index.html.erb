@@ -1,0 +1,6 @@
+<h1><%= t("microposts.index.title") %></h1>
+<ul>
+  <% @microposts.each do |post| %>
+    <li><%= post.content %></li>
+  <% end %>
+</ul>

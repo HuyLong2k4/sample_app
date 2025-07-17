@@ -1,0 +1,28 @@
+vi:
+  app:
+    name: "Ứng dụng mẫu"
+  titles: 
+    base: "Ứng dụng mẫu hướng dẫn Ruby on Rails"
+  microposts:
+    index:
+      title: "Tất cả Microposts"
+  contact:
+    home:
+      title: "Trang chủ"
+      heading: "Chào mừng đến với Ứng dụng mẫu"
+      description_html: "Đây là trang chủ cho ứng dụng mẫu %{link}."
+      signup_button: "Đăng ký ngay!"
+    help:
+      title: "Trợ giúp"
+      link_text: "Trang trợ giúp của Rails Tutorial"
+      book_html: "<em>Sách Ruby on Rails Tutorial</em>"
+      description_html: >
+        Nhận trợ giúp về Ruby on Rails Tutorial tại %{help_link}.
+        Để được trợ giúp về ứng dụng mẫu này, xem %{book_link}.
+    nav:
+      home: "Trang chủ"
+      help: "Trợ giúp"
+      login: "Đăng nhập"
+      lang:
+        vi: "Tiếng Việt"
+        en: "Tiếng Anh"

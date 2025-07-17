@@ -1,0 +1,8 @@
+<% provide(:title, t("contact.home.title")) %>
+<div class="center jumbotron">
+  <h1><%= t("contact.home.heading") %></h1>
+  <h2>
+    <%= t("contact.home.description_html", link: link_to("Ruby on Rails Tutorial", "http://www.railstutorial.org/")) %>
+  </h2>
+  <%= link_to t("contact.home.signup_button"), '#', class: "btn btn-lg btn-primary" %>
+</div>
