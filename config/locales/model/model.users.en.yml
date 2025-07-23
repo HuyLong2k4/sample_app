@@ -1,0 +1,17 @@
+en:
+  users:
+    create:
+      welcome: "Welcome to the Sample App!"
+    new:
+      sign_up: "Sign up"
+      name: "Name"
+      email: "Email"
+      birthday: "Birthday"
+      gender: "Gender"
+      genders:
+        female: "Female"
+        male: "Male"
+        other: "Other"
+      password: "Password"
+      password_confirmation: "Password confirmation"
+      create_account: "Create my account"

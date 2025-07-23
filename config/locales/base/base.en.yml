@@ -1,7 +1,7 @@
 en:
   app:
     name: "Sample App"
-  titles: 
+  titles:
     base: "Ruby on Rails Tutorial Sample App"
   microposts:
     index:
@@ -14,11 +14,11 @@ en:
       signup_button: "Sign up now!"
     help:
       title: "Help"
-      link_text: "Rails Tutorial help page"
-      book_html: "<em>Ruby on Rails Tutorial</em> book"
+      link_text: "Rails Tutorial Help Page"
+      book_html: "<em>Ruby on Rails Tutorial Book</em>"
       description_html: >
-        Get help on the Ruby on Rails Tutorial at the %{help_link}.
-        To get help on this sample app, see the %{book_link}.
+        Get help on the Ruby on Rails Tutorial at %{help_link}.
+        For help with this sample app, see %{book_link}.
     nav:
       home: "Home"
       help: "Help"
@@ -27,4 +27,14 @@ en:
         vi: "Vietnamese"
         en: "English"
     users:
-      not_found: "User not found"
+      not_found: "This user does not exist"
+  date:
+    order:
+      - :day
+      - :month
+      - :year
+    formats:
+      default: "%Y-%m-%d"
+  time:
+    formats:
+      default: "%Y-%m-%d %H:%M"

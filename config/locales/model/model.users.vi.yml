@@ -1,0 +1,17 @@
+vi:
+  users:
+    create:
+      welcome: "Chào mừng bạn đến với Sample App!"
+    new:
+      sign_up: "Đăng ký"
+      name: "Họ tên"
+      email: "Email"
+      birthday: "Ngày sinh"
+      gender: "Giới tính"
+      genders:
+        female: "Nữ"
+        male: "Name"
+        other: "Khác"
+      password: "Mật khẩu"
+      password_confirmation: "Xác nhận mật khẩu"
+      create_account: "Tạo tài khoản"

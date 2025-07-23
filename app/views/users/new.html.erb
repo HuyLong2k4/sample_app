@@ -1,0 +1,28 @@
+<% provide :title, t(".sign_up") %>
+<h1><%= t(".sign_up") %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= render "shared/error_message" %>
+    <%= form_for(@user) do |f| %>
+      <%= f.label :name, t(".name") %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email, t(".email") %>
+      <%= f.email_field :email %>
+
+      <%= f.label :birthday, t(".birthday") %>
+      <%= f.date_select :birthday, start_year: UsersHelper::BIRTHDAY_START_YEAR, end_year: Date.today.year %>
+
+      <%= f.label :gender, t(".gender") %>
+      <%= f.select :gender, User.genders.keys.map { |g| [t(".genders.#{g}"), g] } %>
+
+      <%= f.label :password, t(".password") %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, t(".password_confirmation") %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit t(".create_account"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
