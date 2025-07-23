@@ -1,0 +1,17 @@
+activerecord:
+  models:
+    user: "Người dùng"
+  attributes:
+    user:
+      name: "Tên"
+      email: "Email"
+  errors:
+    models:
+      user:
+        attributes:
+          name:
+            blank: "không được để trống"
+          email:
+            blank: "không được để trống"
+            invalid: "không đúng định dạng"
+            taken: "đã được sử dụng"

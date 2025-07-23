@@ -154,3 +154,95 @@ end
 Chúng ta có thể sử dụng một phương thức format_date trong view của UsersController để hiển thị ngày tháng :
 
 <%= format_date(@user.created_at) %>
+
+
+Chapter 6:
+
+Exercise 1:
+
+What is uniqueness combined with scope?
+uniqueness đảm bảo giá trị không trùng trong một bảng.
+
+Khi kết hợp với scope, Rails sẽ kiểm tra duy nhất trong phạm vi một cột khác.
+
+Ví dụ:
+validates :name, uniqueness: { scope: :category_id }
+
+Effect of gem bcrypt
+Gem bcrypt được dùng để mã hóa mật khẩu bằng thuật toán BCrypt.
+
+Giúp đảm bảo an toàn cho mật khẩu khi lưu trong database.
+
+Là yêu cầu bắt buộc khi sử dụng has_secure_password trong Rails.
+
+Effect of Method Has_Secure_Password
+-Cung cấp tính năng xác thực người dùng an toàn.
+-Tự động thêm:
+
+-Thuộc tính ảo password và password_confirmation.
+
+-Phương thức authenticate để xác minh mật khẩu.
+
+-Khi sử dụng, cần có cột password_digest trong bảng và gem bcrypt.
+
+What is Callback? Present a few types of callback?
+-Callback là các hàm được tự động gọi trước, sau hoặc trong quá trình xử lý một hành động (create, update, save...).
+-Một số loại callback phổ biến:
+
+before_validation, after_validation
+
+before_save, after_save
+
+before_create, after_create
+
+after_commit, after_rollback
+
+Distinguish After_Save, After_Commit
+after_save : Gọi sau khi object được lưu (save, update)
+-after_commit: Gọi sau khi transaction lưu thành công
+
+Distinguish downcase vs. Downcase!
+downcase: Trả về bản sao của chuỗi đã chuyển thành chữ thường -> trả về chuỗi mới
+-downcase! : Chuyển chính object thành chữ thường (nội tại) nếu có thay đổi -> trả về self nếu thay đổi, nil nếu không có thay đổi
+
+Why use migration
+Migration là công cụ Rails dùng để quản lý thay đổi cấu trúc database.
+
+Ưu điểm:
+
+Dễ tạo/sửa/xóa bảng, cột, index...
+
+Giúp đồng bộ database giữa các thành viên.
+
+Có thể rollback khi cần.
+
+Dễ kiểm soát lịch sử thay đổi DB.
+
+Exercise 2:
+
+How to validate the user's birthday must be in the last 100 years?
+class User < ApplicationRecord
+validate :birthday_within_last_100_years
+private
+
+def birthday_within_last_100_years
+  if birthday.present? && birthday < 100.years.ago.to_date
+    errors.add(:birthday, "must be within the last 100 years")
+  end
+  end
+end
+
+Where is method has_secure_password? Which this method will be provided by? How does this method work?
+has_secure_password là method được cung cấp bởi module ActiveModel::SecurePassword của Rails.
+
+Cách hoạt động: Khi thêm has_secure_password trong model, nó sẽ:
+
+Yêu cầu model có cột password_digest trong database.
+
+Tự động thêm các phương thức:
+
+password=: mã hóa mật khẩu và lưu vào password_digest
+
+authenticate: kiểm tra mật khẩu có đúng không
+
+Hỗ trợ xác thực password_confirmation

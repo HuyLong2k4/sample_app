@@ -26,3 +26,5 @@ en:
       lang:
         vi: "Vietnamese"
         en: "English"
+    users:
+      not_found: "User not found"

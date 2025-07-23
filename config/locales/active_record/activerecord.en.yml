@@ -1,0 +1,18 @@
+en:
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        name: "Name"
+        email: "Email"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "can't be blank"
+            email:
+              blank: "can't be blank"
+              invalid: "format is invalid"
+              taken: "has already been taken"
