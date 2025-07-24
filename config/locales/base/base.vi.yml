@@ -23,6 +23,10 @@ vi:
       home: "Trang chủ"
       help: "Trợ giúp"
       login: "Đăng nhập"
+      profile: "Trang cá nhân"
+      settings: "Cài đặt"
+      account: "Tài khoản"
+      log_out: "Đăng xuất"
       lang:
         vi: "Tiếng Việt"
         en: "Tiếng Anh"
