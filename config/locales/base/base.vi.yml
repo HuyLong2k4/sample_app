@@ -28,3 +28,13 @@ vi:
         en: "Tiếng Anh"
     users:
       not_found: "Không tồn tại user này"     
+  date:
+    order:
+      - :day
+      - :month
+      - :year
+    formats:
+      default: "%d/%m/%Y"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"

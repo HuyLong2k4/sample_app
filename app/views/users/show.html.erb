@@ -1,1 +1,15 @@
-<%= "#{@user.name}, #{@user.email}" %>
+<% provide :title, @user.name %>
+<div class="row">
+    <aside class="col-md-4">
+        <section class="user_info">
+            <h1>
+                <%= gravatar_for @user %>
+                <%= @user.name %>
+            </h1>
+            <div>
+                <p><%= l(@user.created_at) %></p>
+                <p><%= l(@user.updated_at) %></p>
+            </div>
+        </section>
+    </aside>
+</div>

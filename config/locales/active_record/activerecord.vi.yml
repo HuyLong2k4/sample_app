@@ -1,17 +1,35 @@
-activerecord:
-  models:
-    user: "Người dùng"
-  attributes:
-    user:
-      name: "Tên"
-      email: "Email"
-  errors:
+vi:
+  activerecord:
     models:
+      user: "Người dùng"
+    attributes:
       user:
-        attributes:
-          name:
-            blank: "không được để trống"
-          email:
-            blank: "không được để trống"
-            invalid: "không đúng định dạng"
-            taken: "đã được sử dụng"
+        name: "Tên"
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "không được để trống"
+            email:
+              blank: "không được để trống"
+              invalid: "không đúng định dạng"
+              taken: "đã được sử dụng"
+            password:
+              blank: "không được để trống"
+            password_confirmation:
+              confirmation: "không khớp với mật khẩu"
+              blank: "không được để trống"
+
+  errors:
+    messages:
+      blank: "không được để trống"
+      confirmation: "không khớp với %{attribute}"
+      taken: "đã được sử dụng"
+      invalid: "không hợp lệ"
+    title:
+      one: "Biểu mẫu có 1 lỗi."
+      other: "Biểu mẫu có %{count} lỗi."
