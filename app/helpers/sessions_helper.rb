@@ -24,6 +24,16 @@ module SessionsHelper
     current_user.present?
   end
 
+  # Stores the URL trying to be accessed.
+  def store_location
+    session[:forwarding_url] = request.original_url if request.get?
+  end
+
+  # Returns true if the given user is the current user.
+  def current_user? user
+    user == current_user
+  end
+
   # Logs out the current user.
   def log_out
     forget(current_user)
@@ -45,5 +55,6 @@ module SessionsHelper
     if user&.authenticated?(cookies[:remember_token])
       log_in(user)
       user
+    end
   end
 end
