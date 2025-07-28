@@ -7,8 +7,13 @@ vi:
     new:
       log_in: "Đăng nhập"
       remember: "Lưu mật khẩu?"
+    create:
+      invalid: "Chưa tạo tài khoản"
   new_user?: "Tài khoản mới?"
   sign_up_now!: "Đăng ký ngay!"
+  create_account: "Tạo tài khoản"
+  save_changes: "Lưu những thay đổi"
+  all_user: "Tất cả người dùng"
   microposts:
     index:
       title: "Tất cả Microposts"

@@ -9,6 +9,10 @@ gem "config"
 
 gem "bootstrap-sass", "3.4.1"
 
+gem "faker", "2.21.0"
+
+gem "pagy"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.5"
 

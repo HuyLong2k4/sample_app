@@ -284,3 +284,44 @@ Cookie bị xóa hoặc hết hạn: Cookie sẽ mất khi:
 + Server yêu cầu xóa: cookies.delete :user_id
 
 + Người dùng xóa cookie trong trình duyệt
+
+Chapter 10 : 
+
+1. How does the form_for build HTML form with PUT/PATCH method?
+
+- HTML chỉ hỗ trợ GET và POST, nên Rails dùng "hidden field" để giả lập PUT/PATCH/DELETE.
+
+<%= form_for(@user) do |f| %>
+  ...
+<% end %>
+
+- Nếu @user đã tồn tại (đang update), Rails sẽ tạo:
+
+<form action="/users/1" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="hidden" name="authenticity_token" value="...">
+  ...
+</form>
+
+- Rails server đọc method="post" và kết hợp params[:_method] = "patch" để hiểu rằng đây là yêu cầu PATCH.
+
+2. Why do you use allow_nil: true?
+
+- Trong validations, allow_nil: true cho phép bỏ qua kiểm tra nếu giá trị là nil.
+
+Ví dụ: 
+
+validates :password, length: { minimum: 6 }, allow_nil: true
+
+
+ Khi password = nil, validation sẽ không kiểm tra độ dài.
+→ Hữu ích khi update user mà không thay đổi mật khẩu.
+
+3. Why do you define redirect_back_or and store_location method?
+
+Khi người dùng chưa đăng nhập và truy cập trang yêu cầu đăng nhập, ta cần:
+
+- Lưu lại URL họ định vào → store_location
+
+- Chuyển họ đến URL đó sau khi đăng nhập → redirect_back_or
+

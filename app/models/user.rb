@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
+
   has_secure_password
 
   NAME_MAX_LENGTH = 50
@@ -24,6 +25,9 @@ class User < ApplicationRecord
 
   validates :birthday, presence: true
   validates :gender, presence: true
+
+  validates :password, presence: true,
+      length: {minimum: Settings.digits.digit_6}, allow_nil: true
 
   # Returns the hash digest of the given string.
   def self.digest string
@@ -53,4 +57,6 @@ class User < ApplicationRecord
   def forget
     update_column :remember_digest, nil
   end
+
+  scope :newest, ->{order(created_at: :desc)}
 end

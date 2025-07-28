@@ -1,7 +1,7 @@
 vi:
   users:
     create:
-      welcome: "Chào mừng bạn đến với Sample App!"
+      welcome: "Chào mừng bạn đến với Ứng dụng Mẫu!"
     new:
       sign_up: "Đăng ký"
       name: "Họ tên"
@@ -10,8 +10,23 @@ vi:
       gender: "Giới tính"
       genders:
         female: "Nữ"
-        male: "Name"
+        male: "Nam"
         other: "Khác"
       password: "Mật khẩu"
       password_confirmation: "Xác nhận mật khẩu"
       create_account: "Tạo tài khoản"
+    edit:
+      title: "Chỉnh sửa người dùng"
+      heading: "Cập nhật hồ sơ của bạn"
+      password_confirmation: "Xác nhận"
+      save_changes: "Lưu thay đổi"
+      change_gravatar: "thay đổi"
+      updated_danger: "Vui lòng đăng nhập."
+      errors: "Bạn không thể chỉnh sửa tài khoản này"
+    update:
+      profile_updated: "Cập nhật hồ sơ thành công"
+    delete:
+      deleted: "Đã xóa người dùng"
+      delete_fail: "Xóa thất bại!"
+    invalid: "Email hoặc mật khẩu không đúng"
+    confirm_delete: "Bạn chắc chắn chứ?"
