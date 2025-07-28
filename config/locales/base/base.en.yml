@@ -3,6 +3,11 @@ en:
     name: "Sample App"
   titles:
     base: "Ruby on Rails Tutorial Sample App"
+  sessions:
+    new:
+      log_in: "Log in"
+  new_user?: "New User?"
+  sign_up_now!: "Sign up now!"
   microposts:
     index:
       title: "All Microposts"
@@ -23,6 +28,10 @@ en:
       home: "Home"
       help: "Help"
       login: "Log in"
+      profile: "Profile"
+      settings: "Settings"
+      account: "Account"
+      log_out: "Log out"
       lang:
         vi: "Vietnamese"
         en: "English"

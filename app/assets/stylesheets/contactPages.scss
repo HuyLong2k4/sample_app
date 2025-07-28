@@ -66,3 +66,12 @@ input {
         color: $state-danger-text;
     }
 }
+/* Dropdown menu */
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-item {
+    margin-left: 30px;
+}
