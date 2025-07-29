@@ -246,3 +246,41 @@ password=: mã hóa mật khẩu và lưu vào password_digest
 authenticate: kiểm tra mật khẩu có đúng không
 
 Hỗ trợ xác thực password_confirmation
+
+Chapter 9:
+
+1. What is the function of code attr_accessor?
+
+Trong Ruby, attr_accessor là một cách viết ngắn gọn để khai báo getter và setter cho một thuộc tính instance.
+
+2. What is the difference between instance method vs. class method
+
+- Instance method: hoạt động trên một đối tượng cụ thể của class (dùng biến @).  Ví dụ: user.name
+- Class method: hoạt động ở cấp độ class, không cần tạo object để gọi.   Ví dụ :: User.find_by(email: "abc")
+
+3. What is cookies? Presenting the cookies lifecycle
+Cookie là một đoạn dữ liệu nhỏ được trình duyệt lưu trữ, dùng để nhận diện người dùng và lưu thông tin giữa các phiên làm việc (sessions).
+
+Trong Rails, cookie được quản lý qua cookies[], có thể là tạm thời hoặc lâu dài (permanent).
+
+- Vòng đời: 
+Server gửi cookie: Khi người dùng đăng nhập hoặc thực hiện một hành động, server có thể gửi cookie về trình duyệt:
+
+cookies[:user_id] = user.id
+cookies.permanent[:remember_token] = user.remember_token
+
+Browser lưu trữ cookie: Trình duyệt người dùng lưu cookie (theo thời gian sống xác định).
+
+Browser gửi lại cookie: Ở mỗi request tiếp theo, trình duyệt tự động gửi cookie trở lại server.
+
+Server đọc cookie: Ứng dụng Rails đọc cookie qua:
+
+cookies[:user_id]
+
+Cookie bị xóa hoặc hết hạn: Cookie sẽ mất khi:
+
++ Hết thời hạn (expires)
+
++ Server yêu cầu xóa: cookies.delete :user_id
+
++ Người dùng xóa cookie trong trình duyệt

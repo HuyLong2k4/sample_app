@@ -3,6 +3,12 @@ vi:
     name: "Ứng dụng mẫu"
   titles: 
     base: "Ứng dụng mẫu hướng dẫn Ruby on Rails"
+  sessions:
+    new:
+      log_in: "Đăng nhập"
+      remember: "Lưu mật khẩu?"
+  new_user?: "Tài khoản mới?"
+  sign_up_now!: "Đăng ký ngay!"
   microposts:
     index:
       title: "Tất cả Microposts"
