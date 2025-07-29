@@ -6,6 +6,7 @@ en:
   sessions:
     new:
       log_in: "Log in"
+      remember: "Remember me on this computer"
   new_user?: "New User?"
   sign_up_now!: "Sign up now!"
   microposts:
