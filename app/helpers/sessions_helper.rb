@@ -40,10 +40,11 @@ module SessionsHelper
 
   private
 
-  def user_from_cookie(user_id)
+  def user_from_cookie user_id
     user = User.find_by(id: user_id)
-    if user&.authenticated?(cookies[:remember_token])
-      log_in(user)
-      user
+    return unless user&.authenticated?(cookies[:remember_token])
+
+    log_in(user)
+    user
   end
 end
