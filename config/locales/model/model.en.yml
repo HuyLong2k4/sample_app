@@ -2,6 +2,7 @@ en:
   users:
     create:
       welcome: "Welcome to the Sample App!"
+      check_email: "Please check your email to activate your account."
     new:
       sign_up: "Sign up"
       name: "Name"
@@ -30,3 +31,12 @@ en:
       delete_fail: "Delete fail!"
     invalid: "Invalid email password combination"
     confirm_delete: "You sure?"
+    account_activations:
+      edit:
+        success: "Account activated!"
+      load_user:
+        not_found: "User not found"
+      check_activated:
+        already: "Account already activated"
+      check_authenticated:
+        invalid_link: "Invalid activation link"

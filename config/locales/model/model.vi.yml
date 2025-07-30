@@ -2,6 +2,7 @@ vi:
   users:
     create:
       welcome: "Chào mừng bạn đến với Ứng dụng Mẫu!"
+      check_email: "Vui lòng kiểm tra email để kích hoạt tài khoản."
     new:
       sign_up: "Đăng ký"
       name: "Họ tên"
@@ -30,3 +31,12 @@ vi:
       delete_fail: "Xóa thất bại!"
     invalid: "Email hoặc mật khẩu không đúng"
     confirm_delete: "Bạn chắc chắn chứ?"
+    account_activations:
+      edit:
+        success: "Tài khoản đã được kích hoạt!"
+      load_user:
+        not_found: "Không tìm thấy người dùng"
+      check_activated:
+        already: "Tài khoản đã được kích hoạt trước đó"
+      check_authenticated:
+        invalid_link: "Liên kết kích hoạt không hợp lệ"
