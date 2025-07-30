@@ -53,3 +53,6 @@ vi:
   time:
     formats:
       default: "%d/%m/%Y %H:%M"
+  user_mailer:
+    account_activation:
+      body: "Chào mừng bạn đến với Ứng dụng mẫu! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
