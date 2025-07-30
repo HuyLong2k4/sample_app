@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     resources :microposts
     resources :users, only: %i(new create show)
+    resources :password_resets, only: %i(new create edit update)
     get "contact_pages/home"
     get "contact_pages/help"
     get "/signup", to: "users#new"
