@@ -1,0 +1,42 @@
+vi:
+  password_change_mailer:
+    changed_successfully:
+      title: "Đổi mật khẩu thành công"
+      greeting: "Xin chào %{name},"
+      body_html: >
+        Bạn vừa thay đổi mật khẩu, vui lòng đăng nhập lại để xác nhận là bạn!
+      login_link: "Nhấn vào đây"
+      warning: "Nếu bạn không thực hiện thay đổi này, vui lòng liên hệ ngay với đội hỗ trợ của chúng tôi."
+      regards: "Trân trọng,"
+      team_name: "Đội ngũ %{app_name}"
+      footer_notice: "Email này được gửi tự động. Vui lòng không trả lời email này."
+    changed_successfully_text:
+      greeting: "Xin chào %{name},"
+      body: "Bạn vừa thay đổi mật khẩu, vui lòng đăng nhập lại để xác nhận là bạn!"
+      login_link: "Nhấn vào đây: %{url}"
+      warning: "Nếu bạn không thực hiện thay đổi này, vui lòng liên hệ ngay với đội hỗ trợ của chúng tôi."
+      regards: "Trân trọng,"
+      team_name: "Đội ngũ %{app_name}"
+      footer_separator: "---"
+      footer_notice: "Email này được gửi tự động. Vui lòng không trả lời email này."
+  password_resets:
+    mailer:
+      reset_password_html:
+        title: "Đặt lại mật khẩu"
+        instruction: "Để đặt lại mật khẩu của bạn, vui lòng nhấn vào liên kết bên dưới:"
+        link_text: "Đặt lại mật khẩu"
+        expiry_notice: "Liên kết này sẽ hết hạn sau hai giờ."
+        ignore_notice: >
+          Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và mật khẩu của bạn sẽ giữ nguyên như hiện tại.
+      reset_password_text:
+        instruction: "Để đặt lại mật khẩu của bạn, vui lòng nhấn vào liên kết bên dưới:"
+        expiry_notice: "Liên kết này sẽ hết hạn sau hai giờ."
+        ignore_notice: >
+          Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và mật khẩu của bạn sẽ giữ nguyên như hiện tại.
+  user_mailer:
+    account_activation:
+      subject: "Kích hoạt tài khoản"
+    password_reset:
+      subject: "Đặt lại mật khẩu"
+    password_changed:
+      subject: "Mật khẩu đã thay đổi - Vui lòng đăng nhập lại"

@@ -8,8 +8,8 @@ Rails.application.configure do
   
   # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
+    address: ENV["SMTP_ADDRESS"],
+    port: ENV["SMTP_PORT"],
     user_name: ENV["USER_EMAIL"],
     password: ENV["USER_PASSWORD"],
     authentication: "plain",

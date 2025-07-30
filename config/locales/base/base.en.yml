@@ -8,8 +8,12 @@ en:
       log_in: "Log in"
       remember: "Remember me on this computer"
     create:
-      invalid:"Not have account"
-    not_activated: "Account not activated. Check your email for the activation link."
+      invalid: "Not have account"
+      not_activated: "Account not activated. Check your email for the activation link."
+    destroy:
+      success: "Logged out successfully."
+      fail: "Failed to log out. Please try again."
+      not_logged_in: "You are not logged in."
   new_user?: "New User?"
   sign_up_now!: "Sign up now!"
   create_account: "Create my account"
@@ -59,3 +63,25 @@ en:
       greeting: "Hi %{name},"
       body: "Welcome to the Sample App! Click on the link below to activate your account:"
       activate_link: "Activate"
+  password_resets:
+    create:
+      success: "Email sent with password reset instructions"
+      not_found: "Email address not found"
+    update:
+      empty_password: "Password can't be empty"
+      success: "Password has been reset."
+    errors:
+      user_not_found: "User not found!"
+      user_not_active: "User is inactive!"
+      expired: "Password reset has expired."
+    edit:
+      title: "Reset password"
+      heading: "Reset password"
+      password: "Password"
+      password_confirmation: "Confirmation"
+      submit: "Update password"
+    new:
+      title: "Forgot password"
+      heading: "Forgot password"
+      email: "Email"
+      submit: "Submit"

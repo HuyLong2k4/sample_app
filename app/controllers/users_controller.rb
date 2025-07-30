@@ -21,6 +21,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       @user.send_activation_email
+
       flash[:info] = t(".check_email")
       redirect_to root_url, status: :see_other
     else

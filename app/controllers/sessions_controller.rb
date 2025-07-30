@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
   before_action :load_user, only: :create
   before_action :check_authentication, only: :create
   before_action :check_activated, only: :create
+  before_action :check_logged_in, only: :destroy
 
   # GET /login
   def new; end
@@ -15,7 +16,8 @@ class SessionsController < ApplicationController
 
   # DELETE /logout
   def destroy
-    log_out if logged_in?
+    log_out
+    flash[:success] = t("sessions.destroy.success")
     redirect_to root_url, status: :see_other
   end
 
@@ -25,14 +27,14 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params.dig(:session, :email)&.downcase)
     return if @user
 
-    flash.now[:danger] = t(".invalid")
+    flash.now[:danger] = t("sessions.create.invalid")
     render :new, status: :unprocessable_entity
   end
 
   def check_authentication
     return if @user.authenticate(params.dig(:session, :password))
 
-    flash.now[:danger] = t(".invalid")
+    flash.now[:danger] = t("sessions.create.invalid")
     render :new, status: :unprocessable_entity
   end
 
@@ -40,6 +42,13 @@ class SessionsController < ApplicationController
     return if @user.activated?
 
     flash[:warning] = t("sessions.create.not_activated")
+    redirect_to root_url, status: :see_other
+  end
+
+  def check_logged_in
+    return if logged_in?
+
+    flash[:warning] = t("sessions.destroy.not_logged_in")
     redirect_to root_url, status: :see_other
   end
 
