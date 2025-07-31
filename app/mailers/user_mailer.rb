@@ -19,7 +19,7 @@ class UserMailer < ApplicationMailer
     mail to: user.email, subject: "Password reset"
   end
 
-  def password_changed(user)
+  def password_changed user
     @user = user
     @login_url = login_url
     mail(to: user.email, subject: "Password Changed - Please Sign In Again")
