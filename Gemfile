@@ -3,11 +3,21 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 ruby "3.2.2"
 
+gem "image_processing", "1.12.2"
+
+gem "active_storage_validations", "0.9.8"
+
 gem "i18n"
+
+gem "faker"
+
+gem "pagy"
 
 gem "config"
 
 gem "bootstrap-sass", "3.4.1"
+
+gem "mini_magick"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.5"
