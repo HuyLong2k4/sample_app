@@ -4,6 +4,21 @@ class UsersController < ApplicationController
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
 
+  def following
+    @title = "Following"
+    @pagy, @users = pagy @user.following, items: 10
+    render :show_follow
+  end
+
+  def followers
+    @title = "Followers"
+
+    @pagy, @users =
+      pagy @user.followers, items: 10
+
+    render :show_follow
+  end
+
   # GET /users/:id
   def show
     @pagy, @microposts = pagy(@user.microposts, items: Settings.page_10)

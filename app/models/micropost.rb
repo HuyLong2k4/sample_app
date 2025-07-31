@@ -5,6 +5,7 @@ class Micropost < ApplicationRecord
   end
 
   scope :newest, ->{order(created_at: :desc)}
+  scope :relate_post, ->(user_ids){where(user_id: user_ids)}
   validates :content, presence: true, length: {maximum: Settings.digit_140}
 
   validates :image, content_type: {in: %w(image/jpeg image/gif image/png),
