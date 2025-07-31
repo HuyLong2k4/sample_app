@@ -4,6 +4,7 @@ class User < ApplicationRecord
   before_save :downcase_email
   before_create :create_activation_digest
   has_secure_password
+  has_many :microposts, dependent: :destroy
 
   NAME_MAX_LENGTH = 50
   EMAIL_MAX_LENGTH = 255
@@ -82,6 +83,10 @@ class User < ApplicationRecord
   # Sends activation email.
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
+  end
+
+  def feed
+    microposts.order(created_at: :desc)
   end
 
   private
