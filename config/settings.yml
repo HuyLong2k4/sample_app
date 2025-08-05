@@ -1,3 +1,10 @@
 help_link: "http://www.railstutorial.org/help"
 book_link: "http://www.railstutorial.org/book"
 home_link: "#"
+
+digits:
+  digit_6: 6
+
+gravatar:
+  users: 50
+  edit_url: "https://gravatar.com/emails"

@@ -15,3 +15,18 @@ en:
       password: "Password"
       password_confirmation: "Password confirmation"
       create_account: "Create my account"
+    edit:
+      title: "Edit user"
+      heading: "Update your profile"
+      password_confirmation: "Confirmation"
+      save_changes: "Save changes"
+      change_gravatar: "change"
+      updated_danger: "Please log in."
+      errors: "You cannot edit this account"
+    update:
+      profile_updated: "Profile updated"
+    delete:
+      deleted: "User deleted"
+      delete_fail: "Delete fail!"
+    invalid: "Invalid email password combination"
+    confirm_delete: "You sure?"
