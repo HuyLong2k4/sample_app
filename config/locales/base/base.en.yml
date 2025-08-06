@@ -53,3 +53,6 @@ en:
   time:
     formats:
       default: "%Y-%m-%d %H:%M"
+  user_mailer:
+    account_activation:
+      body: "Welcome to the Sample App! Click on the link below to activate your account:"
