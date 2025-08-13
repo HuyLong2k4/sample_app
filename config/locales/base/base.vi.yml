@@ -9,6 +9,7 @@ vi:
       remember: "Lưu mật khẩu?"
     create:
       invalid: "Chưa tạo tài khoản"
+    not_activated: "Tài khoản chưa được kích hoạt. Vui lòng kiểm tra email để kích hoạt."
   new_user?: "Tài khoản mới?"
   sign_up_now!: "Đăng ký ngay!"
   create_account: "Tạo tài khoản"
@@ -53,3 +54,8 @@ vi:
   time:
     formats:
       default: "%d/%m/%Y %H:%M"
+  user_mailer:
+    account_activation:
+      greeting: "Xin chào %{name},"
+      body: "Chào mừng bạn đến với Ứng dụng mẫu! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
+      activate_link: "Kích hoạt"

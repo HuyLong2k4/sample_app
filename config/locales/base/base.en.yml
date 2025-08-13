@@ -9,6 +9,7 @@ en:
       remember: "Remember me on this computer"
     create:
       invalid:"Not have account"
+    not_activated: "Account not activated. Check your email for the activation link."
   new_user?: "New User?"
   sign_up_now!: "Sign up now!"
   create_account: "Create my account"
@@ -53,3 +54,8 @@ en:
   time:
     formats:
       default: "%Y-%m-%d %H:%M"
+  user_mailer:
+    account_activation:
+      greeting: "Hi %{name},"
+      body: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate_link: "Activate"
