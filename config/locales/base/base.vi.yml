@@ -9,7 +9,11 @@ vi:
       remember: "Lưu mật khẩu?"
     create:
       invalid: "Chưa tạo tài khoản"
-    not_activated: "Tài khoản chưa được kích hoạt. Vui lòng kiểm tra email để kích hoạt."
+      not_activated: "Tài khoản chưa được kích hoạt. Vui lòng kiểm tra email để kích hoạt."
+    destroy:
+      success: "Đăng xuất thành công."
+      fail: "Đăng xuất thất bại. Vui lòng thử lại."
+      not_logged_in: "Bạn chưa đăng nhập."
   new_user?: "Tài khoản mới?"
   sign_up_now!: "Đăng ký ngay!"
   create_account: "Tạo tài khoản"
@@ -59,3 +63,25 @@ vi:
       greeting: "Xin chào %{name},"
       body: "Chào mừng bạn đến với Ứng dụng mẫu! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
       activate_link: "Kích hoạt"
+  password_resets:
+    create:
+      success: "Email đặt lại mật khẩu đã được gửi"
+      not_found: "Không tìm thấy địa chỉ email"
+    update:
+      empty_password: "Mật khẩu không được để trống"
+      success: "Mật khẩu đã được đặt lại"
+    errors:
+      user_not_found: "Không tìm thấy người dùng"
+      user_not_active: "Tài khoản chưa được kích hoạt"
+      expired: "Liên kết đặt lại mật khẩu đã hết hạn"
+    edit:
+      title: "Đặt lại mật khẩu"
+      heading: "Đặt lại mật khẩu"
+      password: "Mật khẩu"
+      password_confirmation: "Xác nhận mật khẩu"
+      submit: "Cập nhật mật khẩu"
+    new:
+      title: "Quên mật khẩu"
+      heading: "Quên mật khẩu"
+      email: "Email"
+      submit: "Gửi"

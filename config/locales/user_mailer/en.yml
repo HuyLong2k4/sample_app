@@ -1,0 +1,42 @@
+en:
+  password_change_mailer:
+    changed_successfully:
+      title: "Password Changed Successfully"
+      greeting: "Hello %{name},"
+      body_html: >
+        You just changed your password, sign in again so we know it's you!
+      login_link: "Click here"
+      warning: "If you did not make this change, please contact our support team immediately."
+      regards: "Best regards,"
+      team_name: "Your App Team"
+      footer_notice: "This email was sent automatically. Please do not reply to this email."
+    changed_successfully_text:
+      greeting: "Hello %{name},"
+      body: "You just changed your password, sign in again so we know it's you!"
+      login_link: "Click here: %{url}"
+      warning: "If you did not make this change, please contact our support team immediately."
+      regards: "Best regards,"
+      team_name: "Your App Team"
+      footer_separator: "---"
+      footer_notice: "This email was sent automatically. Please do not reply to this email."
+  password_resets:
+    mailer:
+      reset_password_html:
+        title: "Password reset"
+        instruction: "To reset your password click the link below:"
+        link_text: "Reset password"
+        expiry_notice: "This link will expire in two hours."
+        ignore_notice: >
+          If you did not request your password to be reset, please ignore this email and your password will stay as it is.
+      reset_password_text:
+        instruction: "To reset your password click the link below:"
+        expiry_notice: "This link will expire in two hours."
+        ignore_notice: >
+          If you did not request your password to be reset, please ignore this email and your password will stay as it is.
+  user_mailer:
+    account_activation:
+      subject: "Account activation"
+    password_reset:
+      subject: "Password reset"
+    password_changed:
+      subject: "Password Changed - Please Sign In Again"
